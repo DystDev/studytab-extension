@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import CardDisplay from './screens/CardDisplay';
+import CardEdit from './screens/CardEdit';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [currentComponent, setCurrentComponent] = useState('CardDisplay');
+  // ReactRouter cannot be used in chrome extensions sadly
+
+  switch (currentComponent) {
+    case 'CardDisplay':
+      return <CardDisplay setCurrentComponent={setCurrentComponent} />;
+    case 'CardEdit':
+      return <CardEdit setCurrentComponent={setCurrentComponent} />;
+    default:
+      return null;
+  }
 }
 
 export default App;
