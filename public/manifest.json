@@ -2,7 +2,7 @@
   "manifest_version": 3,
    "name": "StudyTab",
    "version": "0.1",
-   "description": "Make studying easy with a prompt every time you open a new tab.",
+   "description": "Make revising easy by continually learning content when you open a new tab.",
    "author": "DystDev",
    "chrome_url_overrides" : {
      "newtab": "index.html"
