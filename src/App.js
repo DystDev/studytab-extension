@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import CardDisplay from './screens/CardDisplay';
 import CardEdit from './screens/CardEdit';
 
@@ -8,20 +8,20 @@ function App() {
   // ReactRouter cannot be used in chrome extensions sadly
 
   switch (currentComponent) {
-    case 'CardDisplay':
-      return (
-        <div className="appLayout">
-          <CardDisplay setCurrentComponent={setCurrentComponent} />
-        </div>
-      );
-    case 'CardEdit':
-      return (
-        <div className="appLayout">
-          <CardEdit setCurrentComponent={setCurrentComponent} />
-        </div>
-      );
-    default:
-      return null;
+  case 'CardDisplay':
+    return (
+      <div className="appLayout">
+        <CardDisplay setCurrentComponent={setCurrentComponent} />
+      </div>
+    );
+  case 'CardEdit':
+    return (
+      <div className="appLayout">
+        <CardEdit setCurrentComponent={setCurrentComponent} />
+      </div>
+    );
+  default:
+    return null;
   }
 }
 
