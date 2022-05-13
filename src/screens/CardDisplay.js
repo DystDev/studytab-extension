@@ -2,7 +2,7 @@
 /*global chrome*/
 import React, { useEffect, useState } from 'react';
 import '../App.js';
-import FooterCardEditAnchor from '../components/FooterCardEditAnchor.js';
+import FooterCardDisplayAnchor from '../components/FooterCardDisplayAnchor.js';
 import MainCard from '../components/MainCard.js';
 
 const CardDisplay = (props) => {
@@ -15,7 +15,7 @@ const CardDisplay = (props) => {
         result = JSON.parse(result);
       });
     } catch (err) {
-      return err;
+      console.log(err);
     }
   };
 
@@ -32,7 +32,11 @@ const CardDisplay = (props) => {
           text={'No sets! Click the button at the bottom to add a set!'}
         />
       )}
-      <FooterCardEditAnchor onAdd={() => {props.setCurrentComponent('CardEdit')}}/>
+      <FooterCardDisplayAnchor
+        onAdd={() => {
+          props.setCurrentComponent('CardEdit');
+        }}
+      />
     </div>
   );
 };

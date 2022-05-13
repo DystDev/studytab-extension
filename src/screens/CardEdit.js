@@ -1,12 +1,12 @@
 import React from 'react';
+import FooterCardEditAnchor from '../components/FooterCardEditAnchor';
+import Logo from '../components/Logo';
 
-const CardEdit = (props) => {
+const CardEdit = () => {
   return (
     <>
-      <h1>CardEdit</h1>
-      <button onClick={() => props.setCurrentComponent('CardDisplay')}>
-        Go to cardDisplay
-      </button>
+      <Logo />
+      <FooterCardEditAnchor />
     </>
   );
 };
