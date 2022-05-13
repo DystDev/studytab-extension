@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../App.js';
+import MainCard from '../components/MainCard.js';
 
 const CardDisplay = (props) => {
+  const [currentPrompt, setCurrentPrompt] = useState(null);
+
   return (
-    <>
-      <h1>CardDisplay</h1>
-      <button onClick={() => props.setCurrentComponent('CardEdit')}>
-        Go to cardEdit
-      </button>
-    </>
+    <div className="cardDisplayScreen">
+      {currentPrompt != null ? (
+        <MainCard text={currentPrompt} />
+      ) : (
+        <MainCard text={'Loading...'} />
+      )}
+    </div>
   );
 };
 

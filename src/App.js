@@ -9,9 +9,17 @@ function App() {
 
   switch (currentComponent) {
     case 'CardDisplay':
-      return <CardDisplay setCurrentComponent={setCurrentComponent} />;
+      return (
+        <div className="appLayout">
+          <CardDisplay setCurrentComponent={setCurrentComponent} />
+        </div>
+      );
     case 'CardEdit':
-      return <CardEdit setCurrentComponent={setCurrentComponent} />;
+      return (
+        <div className="appLayout">
+          <CardEdit setCurrentComponent={setCurrentComponent} />
+        </div>
+      );
     default:
       return null;
   }
