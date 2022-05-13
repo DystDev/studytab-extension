@@ -2,6 +2,7 @@
 /*global chrome*/
 import React, { useEffect, useState } from 'react';
 import '../App.js';
+import FooterCardEditAnchor from '../components/FooterCardEditAnchor.js';
 import MainCard from '../components/MainCard.js';
 
 const CardDisplay = (props) => {
@@ -31,6 +32,7 @@ const CardDisplay = (props) => {
           text={'No sets! Click the button at the bottom to add a set!'}
         />
       )}
+      <FooterCardEditAnchor onAdd={() => {props.setCurrentComponent('CardEdit')}}/>
     </div>
   );
 };

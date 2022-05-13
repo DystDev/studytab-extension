@@ -15,6 +15,7 @@
 .cardDisplayScreen {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -34,4 +35,20 @@
 .sText {
   font-size: 24px;
   font-family: 'Abel', 'Courier New', Courier, monospace;
+}
+
+.footerEditAnchor {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
 }
